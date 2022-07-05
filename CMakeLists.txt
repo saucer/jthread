@@ -105,6 +105,7 @@ add_executable(test_cvprodcons
         source/test_cvprodcons.cpp
         source/test.hpp)
 add_test(NAME test_cvprodcons COMMAND test_cvprodcons)
+set_tests_properties(test_cvprodcons PROPERTIES TIMEOUT 30) 
 
 add_custom_target(build_tests)
 add_dependencies(build_tests
