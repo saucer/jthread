@@ -13,3 +13,4 @@ Makefile.h
 *.xtr
 *.out
 .pdf
+.DS_Store
