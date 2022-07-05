@@ -20,7 +20,7 @@ all::
 	@echo "  test_cvrace_pred"
 	@echo "  test_cvprodcons"
 
-test_stoken: stop_token.hpp condition_variable_any2.hpp test_stoken.cpp test.hpp Makefile
+test_stoken: ../include/stop_token.hpp condition_variable_any2.hpp test_stoken.cpp test.hpp Makefile
 	$(CXX17) $(CXXFLAGS17) $(INCLUDES) test_stoken.cpp $(LDFLAGS17) -o $@17raw.exe
 	echo PATH=\"$(PATH17)/bin:$$PATH\" ./$@17raw.exe '$$*' > $@17.exe
 	echo PATH=\"$(PATH17)/bin:$$PATH\" ./$@17raw.exe '$$*' > $@.exe
@@ -30,7 +30,7 @@ test_stoken: stop_token.hpp condition_variable_any2.hpp test_stoken.cpp test.hpp
 run_stoken: test_stoken
 	./test_stoken17raw.exe
 
-test_stokencb: stop_token.hpp condition_variable_any2.hpp test_stokencb.cpp test.hpp Makefile
+test_stokencb: ../include/stop_token.hpp condition_variable_any2.hpp test_stokencb.cpp test.hpp Makefile
 	$(CXX17) $(CXXFLAGS17) $(INCLUDES) test_stokencb.cpp $(LDFLAGS17) -o $@17raw.exe
 	echo PATH=\"$(PATH17)/bin:$$PATH\" ./$@17raw.exe '$$*' > $@17.exe
 	echo PATH=\"$(PATH17)/bin:$$PATH\" ./$@17raw.exe '$$*' > $@.exe
@@ -40,7 +40,7 @@ test_stokencb: stop_token.hpp condition_variable_any2.hpp test_stokencb.cpp test
 run_stokencb: test_stokencb
 	./test_stokencb17raw.exe
 
-test_stokenrace: stop_token.hpp condition_variable_any2.hpp test_stokenrace.cpp test.hpp Makefile
+test_stokenrace: ../include/stop_token.hpp condition_variable_any2.hpp test_stokenrace.cpp test.hpp Makefile
 	$(CXX17) $(CXXFLAGS17) $(INCLUDES) test_stokenrace.cpp $(LDFLAGS17) -o $@17raw.exe
 	echo PATH=\"$(PATH17)/bin:$$PATH\" ./$@17raw.exe '$$*' > $@17.exe
 	echo PATH=\"$(PATH17)/bin:$$PATH\" ./$@17raw.exe '$$*' > $@.exe
@@ -50,7 +50,7 @@ test_stokenrace: stop_token.hpp condition_variable_any2.hpp test_stokenrace.cpp 
 run_stokenrace: test_stokenrace
 	./test_stokenrace17raw.exe
 
-test_stopcb: stop_token.hpp test_stopcb.cpp test.hpp Makefile
+test_stopcb: ../include/stop_token.hpp test_stopcb.cpp test.hpp Makefile
 	$(CXX17) $(CXXFLAGS17) $(INCLUDES) test_stopcb.cpp $(LDFLAGS17) -o $@17raw.exe
 	echo PATH=\"$(PATH17)/bin:$$PATH\" ./$@17raw.exe '$$*' > $@17.exe
 	echo PATH=\"$(PATH17)/bin:$$PATH\" ./$@17raw.exe '$$*' > $@.exe
@@ -60,7 +60,7 @@ test_stopcb: stop_token.hpp test_stopcb.cpp test.hpp Makefile
 run_stopcb: test_stopcb
 	./test_stopcb17raw.exe
 
-test_jthread1: stop_token.hpp condition_variable_any2.hpp jthread.hpp test_jthread1.cpp test.hpp Makefile
+test_jthread1: ../include/stop_token.hpp condition_variable_any2.hpp ../include/jthread.hpp test_jthread1.cpp test.hpp Makefile
 	$(CXX17) $(CXXFLAGS17) $(INCLUDES) test_jthread1.cpp $(LDFLAGS17) -o $@17raw.exe
 	echo PATH=\"$(PATH17)/bin:$$PATH\" ./$@17raw.exe '$$*' > $@17.exe
 	echo PATH=\"$(PATH17)/bin:$$PATH\" ./$@17raw.exe '$$*' > $@.exe
@@ -70,7 +70,7 @@ test_jthread1: stop_token.hpp condition_variable_any2.hpp jthread.hpp test_jthre
 run_jthread1: test_jthread1
 	./test_jthread117raw.exe
 
-test_jthread2: stop_token.hpp condition_variable_any2.hpp jthread.hpp test_jthread2.cpp test.hpp Makefile
+test_jthread2: ../include/stop_token.hpp condition_variable_any2.hpp ../include/jthread.hpp test_jthread2.cpp test.hpp Makefile
 	$(CXX17) $(CXXFLAGS17) $(INCLUDES) test_jthread2.cpp $(LDFLAGS17) -o $@17raw.exe
 	echo PATH=\"$(PATH17)/bin:$$PATH\" ./$@17raw.exe '$$*' > $@17.exe
 	echo PATH=\"$(PATH17)/bin:$$PATH\" ./$@17raw.exe '$$*' > $@.exe
@@ -80,7 +80,7 @@ test_jthread2: stop_token.hpp condition_variable_any2.hpp jthread.hpp test_jthre
 run_jthread2: test_jthread2
 	./test_jthread217raw.exe
 
-test_cv: stop_token.hpp jthread.hpp condition_variable_any2.hpp test_cv.cpp test.hpp Makefile
+test_cv: ../include/stop_token.hpp ../include/jthread.hpp condition_variable_any2.hpp test_cv.cpp test.hpp Makefile
 	$(CXX17) $(CXXFLAGS17) $(INCLUDES) test_cv.cpp $(LDFLAGS17) -o $@17raw.exe
 	echo PATH=\"$(PATH17)/bin:$$PATH\" ./$@17raw.exe '$$*' > $@17.exe
 	echo PATH=\"$(PATH17)/bin:$$PATH\" ./$@17raw.exe '$$*' > $@.exe
@@ -90,7 +90,7 @@ test_cv: stop_token.hpp jthread.hpp condition_variable_any2.hpp test_cv.cpp test
 run_cv: test_cv
 	./test_cv17raw.exe
 
-test_cvcb: stop_token.hpp jthread.hpp condition_variable_any2.hpp test_cvcb.cpp test.hpp Makefile
+test_cvcb: ../include/stop_token.hpp ../include/jthread.hpp condition_variable_any2.hpp test_cvcb.cpp test.hpp Makefile
 	$(CXX17) $(CXXFLAGS17) $(INCLUDES) test_cvcb.cpp $(LDFLAGS17) -o $@17raw.exe
 	echo PATH=\"$(PATH17)/bin:$$PATH\" ./$@17raw.exe '$$*' > $@17.exe
 	echo PATH=\"$(PATH17)/bin:$$PATH\" ./$@17raw.exe '$$*' > $@.exe
@@ -100,7 +100,7 @@ test_cvcb: stop_token.hpp jthread.hpp condition_variable_any2.hpp test_cvcb.cpp 
 run_cvcb: test_cvcb
 	./test_cvcb17raw.exe
 
-test_cvrace: stop_token.hpp jthread.hpp condition_variable_any2.hpp test_cvrace.cpp test.hpp Makefile
+test_cvrace: ../include/stop_token.hpp ../include/jthread.hpp condition_variable_any2.hpp test_cvrace.cpp test.hpp Makefile
 	$(CXX17) $(CXXFLAGS17) $(INCLUDES) test_cvrace.cpp $(LDFLAGS17) -o $@17raw.exe
 	echo PATH=\"$(PATH17)/bin:$$PATH\" ./$@17raw.exe '$$*' > $@17.exe
 	echo PATH=\"$(PATH17)/bin:$$PATH\" ./$@17raw.exe '$$*' > $@.exe
@@ -110,7 +110,7 @@ test_cvrace: stop_token.hpp jthread.hpp condition_variable_any2.hpp test_cvrace.
 run_cvrace: test_cvrace
 	./test_cvrace17raw.exe
 
-test_cvrace_hh: stop_token.hpp jthread.hpp condition_variable_any2.hpp test_cvrace_hh.cpp test.hpp Makefile
+test_cvrace_hh: ../include/stop_token.hpp ../include/jthread.hpp condition_variable_any2.hpp test_cvrace_hh.cpp test.hpp Makefile
 	$(CXX17) $(CXXFLAGS17) $(INCLUDES) test_cvrace_hh.cpp $(LDFLAGS17) -o $@17raw.exe
 	echo PATH=\"$(PATH17)/bin:$$PATH\" ./$@17raw.exe '$$*' > $@17.exe
 	echo PATH=\"$(PATH17)/bin:$$PATH\" ./$@17raw.exe '$$*' > $@.exe
@@ -120,7 +120,7 @@ test_cvrace_hh: stop_token.hpp jthread.hpp condition_variable_any2.hpp test_cvra
 run_cvrace_hh: test_cvrace_hh
 	./test_cvracehh17raw.exe
 
-test_cvrace_stop: stop_token.hpp jthread.hpp condition_variable_any2.hpp test_cvrace_stop.cpp test.hpp Makefile
+test_cvrace_stop: ../include/stop_token.hpp ../include/jthread.hpp condition_variable_any2.hpp test_cvrace_stop.cpp test.hpp Makefile
 	$(CXX17) $(CXXFLAGS17) $(INCLUDES) test_cvrace_stop.cpp $(LDFLAGS17) -o $@17raw.exe
 	echo PATH=\"$(PATH17)/bin:$$PATH\" ./$@17raw.exe '$$*' > $@17.exe
 	echo PATH=\"$(PATH17)/bin:$$PATH\" ./$@17raw.exe '$$*' > $@.exe
@@ -140,7 +140,7 @@ test_cvrace_pred: condition_variable_any2.hpp test_cvrace_pred.cpp Makefile
 run_cvrace_pred: test_cvrace_pred
 	./test_cvrace_pred17raw.exe
 
-test_cvprodcons: stop_token.hpp jthread.hpp condition_variable_any2.hpp test_cvprodcons.cpp test.hpp Makefile
+test_cvprodcons: ../include/stop_token.hpp ../include/jthread.hpp condition_variable_any2.hpp test_cvprodcons.cpp test.hpp Makefile
 	$(CXX17) $(CXXFLAGS17) $(INCLUDES) test_cvprodcons.cpp $(LDFLAGS17) -o $@17raw.exe
 	echo PATH=\"$(PATH17)/bin:$$PATH\" ./$@17raw.exe '$$*' > $@17.exe
 	echo PATH=\"$(PATH17)/bin:$$PATH\" ./$@17raw.exe '$$*' > $@.exe
@@ -150,7 +150,7 @@ test_cvprodcons: stop_token.hpp jthread.hpp condition_variable_any2.hpp test_cvp
 run_cvprodcons: test_cvprodcons
 	./test_cvprodcons17raw.exe
 
-jthread.clang: jthread.hpp jthread.cpp stop_token.hpp iwait.hpp test.hpp Makefile
+jthread.clang: ../include/jthread.hpp jthread.cpp ../include/stop_token.hpp iwait.hpp test.hpp Makefile
 	$(CXXCLANG) $(CXXFLAGSCLANG) -std=c++1z $(INCLUDES) jthread.cpp $(LDFLAGSCLANG) -o $@clangraw.exe
 	echo PATH=\"$(PATH17)/bin:$$PATH\" ./$@clangraw.exe '$$*' > $@clang.exe
 	echo PATH=\"$(PATH17)/bin:$$PATH\" ./$@clangraw.exe '$$*' > $@.exe
