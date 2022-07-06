@@ -1,4 +1,4 @@
-#include "stop_token.hpp"
+#include "stop_token"
 #include <iostream>
 #include <type_traits>
 #include <functional>

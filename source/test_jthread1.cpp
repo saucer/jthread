@@ -1,4 +1,4 @@
-#include "jthread.hpp"
+#include "jthread"
 #include <iostream>
 #include <string>
 #include <chrono>

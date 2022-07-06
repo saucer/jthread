@@ -1,4 +1,4 @@
-#include "jthread.hpp"
+#include "jthread"
 #include "condition_variable_any2.hpp"
 #include <iostream>
 #include <string>

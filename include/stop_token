@@ -11,6 +11,8 @@
 
 #if defined(__x86_64__) || defined(_M_X64)
 #include <immintrin.h>
+#elif defined(__aarch64__)
+#include <arm_acle.h>
 #endif
 
 namespace std {
@@ -18,6 +20,10 @@ inline void __spin_yield() noexcept {
   // TODO: Platform-specific code here
 #if defined(__x86_64__) || defined(_M_X64)
   _mm_pause();
+#elif defined(__aarch64__)
+  __yield();
+#else
+#error "Platform not supported."
 #endif
 }
 

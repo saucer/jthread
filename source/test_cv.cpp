@@ -1,5 +1,5 @@
 #include "condition_variable_any2.hpp"
-#include "jthread.hpp"
+#include "jthread"
 #include <iostream>
 #include <string>
 #include <sstream>

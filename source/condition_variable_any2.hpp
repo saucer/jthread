@@ -7,7 +7,7 @@
 //*****************************************************************************
 // forward declarations are in separate header due to cyclic type dependencies:
 //*****************************************************************************
-#include "stop_token.hpp"
+#include "stop_token"
 #include <condition_variable>
 #include <iostream>
 
