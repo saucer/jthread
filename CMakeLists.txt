@@ -3,15 +3,32 @@ cmake_minimum_required(VERSION 3.13)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-project(jthread)
+project(jthread VERSION 22.07.0
+        HOMEPAGE_URL https://github.com/StirlingLabs/jthread
+        LANGUAGES CXX)
 
 add_library(jthread INTERFACE)
 
 target_sources(jthread INTERFACE include/jthread.hpp include/stop_token.hpp)
 
-target_include_directories(jthread INTERFACE include/)
+target_include_directories(jthread
+        INTERFACE $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
+        $<INSTALL_INTERFACE:${CMAKE_INSTALL_INCLUDEDIR}>)
+
+target_compile_features(jthread INTERFACE cxx_std_17)
 
 include_directories(include)
+
+include(GNUInstallDirs)
+
+install(TARGETS jthread
+        EXPORT jthread_Targets
+        ARCHIVE DESTINATION ${CMAKE_INSTALL_LIBDIR}
+        LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR}
+        RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR})
+
+install(DIRECTORY ${PROJECT_SOURCE_DIR}/include
+        DESTINATION ${CMAKE_INSTALL_INCLUDEDIR})
 
 enable_testing()
 

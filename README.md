@@ -24,7 +24,7 @@ Main authors:  Nicolai Josuttis (http://www.josuttis.com/contact.html) and Lewis
 
 ## Folder Contents
 
-<b>includes/</b>
+<b>include/</b>
 - headers that can be included as an implementation in other projects (e.g. to polyfill Clang).
   - note attribution requirements under license
 
