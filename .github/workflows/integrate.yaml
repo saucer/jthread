@@ -115,5 +115,5 @@ jobs:
             name: Artifact
             with:
                 name: jthread-win-x64
-                path: build/bin/Release/
+                path: build/Release/
                 if-no-files-found: error

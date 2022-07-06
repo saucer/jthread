@@ -21,6 +21,7 @@ add_executable(test_stoken
         source/test_stoken.cpp
         source/test.hpp)
 add_test(NAME test_stoken COMMAND test_stoken)
+set_tests_properties(test_stoken PROPERTIES TIMEOUT 30)
 
 add_executable(test_stokencb
         include/stop_token.hpp
@@ -28,6 +29,7 @@ add_executable(test_stokencb
         source/test_stokencb.cpp
         source/test.hpp)
 add_test(NAME test_stokencb COMMAND test_stokencb)
+set_tests_properties(test_stokencb PROPERTIES TIMEOUT 30)
 
 add_executable(test_stokenrace
         include/stop_token.hpp
@@ -35,12 +37,14 @@ add_executable(test_stokenrace
         source/test_stokenrace.cpp
         source/test.hpp)
 add_test(NAME test_stokenrace COMMAND test_stokenrace)
+set_tests_properties(test_stokenrace PROPERTIES TIMEOUT 30)
 
 add_executable(test_stopcb
         include/stop_token.hpp
         source/test_stopcb.cpp
         source/test.hpp)
 add_test(NAME test_stopcb COMMAND test_stopcb)
+set_tests_properties(test_stopcb PROPERTIES TIMEOUT 30)
 
 add_executable(test_jthread1
         include/stop_token.hpp
@@ -49,6 +53,7 @@ add_executable(test_jthread1
         source/test_jthread1.cpp
         source/test.hpp)
 add_test(NAME test_jthread1 COMMAND test_jthread1)
+set_tests_properties(test_jthread1 PROPERTIES TIMEOUT 30)
 
 add_executable(test_jthread2
         include/stop_token.hpp
@@ -57,6 +62,7 @@ add_executable(test_jthread2
         source/test_jthread2.cpp
         source/test.hpp)
 add_test(NAME test_jthread2 COMMAND test_jthread2)
+set_tests_properties(test_jthread2 PROPERTIES TIMEOUT 30)
 
 # CV is just not ready for "prime time" (noop sched 1-core)
 if (NOT DEFINED ENV{CI})
@@ -67,6 +73,7 @@ if (NOT DEFINED ENV{CI})
             source/test_cv.cpp
             source/test.hpp)
     add_test(NAME test_cv COMMAND test_cv)
+    set_tests_properties(test_cv PROPERTIES TIMEOUT 30)
 
     add_executable(test_cvcb
             include/stop_token.hpp
@@ -75,6 +82,7 @@ if (NOT DEFINED ENV{CI})
             source/test_cvcb.cpp
             source/test.hpp)
     add_test(NAME test_cvcb COMMAND test_cvcb)
+    set_tests_properties(test_cvcb PROPERTIES TIMEOUT 30)
 
     add_executable(test_cvrace
             include/stop_token.hpp
@@ -83,6 +91,7 @@ if (NOT DEFINED ENV{CI})
             source/test_cvrace.cpp
             source/test.hpp)
     add_test(NAME test_cvrace COMMAND test_cvrace)
+    set_tests_properties(test_cvrace PROPERTIES TIMEOUT 30)
 
     add_executable(test_cvrace_hh
             include/stop_token.hpp
@@ -91,6 +100,7 @@ if (NOT DEFINED ENV{CI})
             source/test_cvrace_hh.cpp
             source/test.hpp)
     add_test(NAME test_cvrace_hh COMMAND test_cvrace_hh)
+    set_tests_properties(test_cvrace_hh PROPERTIES TIMEOUT 30)
 
     add_executable(test_cvrace_stop
             include/stop_token.hpp
@@ -99,6 +109,7 @@ if (NOT DEFINED ENV{CI})
             source/test_cvrace_stop.cpp
             source/test.hpp)
     add_test(NAME test_cvrace_stop COMMAND test_cvrace_stop)
+    set_tests_properties(test_cvrace_stop PROPERTIES TIMEOUT 30)
 
     add_executable(test_cvprodcons
             include/stop_token.hpp
@@ -107,7 +118,7 @@ if (NOT DEFINED ENV{CI})
             source/test_cvprodcons.cpp
             source/test.hpp)
     add_test(NAME test_cvprodcons COMMAND test_cvprodcons)
-    set_tests_properties(test_cvprodcons PROPERTIES TIMEOUT 300)
+    set_tests_properties(test_cvprodcons PROPERTIES TIMEOUT 30)
 endif ()
 
 # CV is just not ready for "prime time" (noop sched 1-core)
