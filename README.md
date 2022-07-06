@@ -12,16 +12,21 @@ C++ class for a joining and cooperative interruptible thread (std::jthread) with
 
 Main authors:  Nicolai Josuttis (http://www.josuttis.com/contact.html) and Lewis Baker
 
-Note: Tests for condition variable are not run in CI because this implementation does not work in a single-core environment. We recommend that you do not use CV from this repo until tests are run and passing.
+## Note!
+
+- Tests for condition variable are not run in CI because this implementation does not work in a single-core environment. We recommend that you do not use CV from this repo until tests are run and passing. 
+- The code is licensed under a Creative Commons [Attribution 4.0 International License][cc-by]. 
+
 
 [cc-by]: http://creativecommons.org/licenses/by/4.0/
 [cc-by-image]: https://i.creativecommons.org/l/by/4.0/88x31.png
 [cc-by-shield]: https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg
- 
-The code is licensed under a Creative Commons [Attribution 4.0 International License][cc-by]. 
 
-TOC:
-====
+## Folder Contents
+
+<b>includes/</b>
+- headers that can be included as an implementation in other projects (e.g. to polyfill Clang).
+  - note attribution requirements under license
 
 <b>source/</b>
 - source code for the reference implementation
@@ -35,4 +40,3 @@ TOC:
 <b>doc/</b>
 - current and old documentations
   - all proposals P0660*.pdf
-
