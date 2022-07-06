@@ -1,5 +1,7 @@
 # jthread
 
+[![CC BY 4.0][cc-by-shield]][cc-by] ![jthread](https://github.com/StirlingLabs/jthread/actions/workflows/integrate.yaml/badge.svg)
+
 C++ class for a joining and cooperative interruptible thread (std::jthread) with stop_token helper-
 - Reference implementation
 - Test suite
@@ -10,7 +12,7 @@ C++ class for a joining and cooperative interruptible thread (std::jthread) with
 
 Main authors:  Nicolai Josuttis (http://www.josuttis.com/contact.html) and Lewis Baker
 
-[![CC BY 4.0][cc-by-shield]][cc-by]
+Note: Tests for condition variable are not run in CI because this implementation does not work in a single-core environment. We recommend that you do not use CV from this repo until tests are run and passing.
 
 [cc-by]: http://creativecommons.org/licenses/by/4.0/
 [cc-by-image]: https://i.creativecommons.org/l/by/4.0/88x31.png

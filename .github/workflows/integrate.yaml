@@ -63,7 +63,9 @@ jobs:
             name: Artifact
             with:
                 name: jthread-linux-glibc
-                path: build/
+                path: |
+                    build/test_*
+                    build/Testing/Temporary/LastTest.log
                 if-no-files-found: error
     
     macos:
@@ -90,7 +92,9 @@ jobs:
             name: Artifact
             with:
                 name: jthread-macos
-                path: build/
+                path: |
+                    build/test_*
+                    build/Testing/Temporary/LastTest.log
                 if-no-files-found: error
     
     windows:
@@ -115,5 +119,7 @@ jobs:
             name: Artifact
             with:
                 name: jthread-win-x64
-                path: build/Release/
+                path: |
+                    build/Release/test_*
+                    build/Release/Testing/Temporary/LastTest.log
                 if-no-files-found: error
