@@ -149,27 +149,27 @@ int main()
                      });
 
   std::cout << std::boolalpha;
-
+/*
   std::cout << "\n\n**************************\n";
   exampleProducerConsumer(0,0, false);
   std::cout << "\n\n**************************\n";
   exampleProducerConsumer(0.1,0, false);
   std::cout << "\n\n**************************\n";
-  exampleProducerConsumer(0,0.1, false);
+  exampleProducerConsumer(0,0.1, false);*/
   std::cout << "\n\n**************************\n";
   exampleProducerConsumer(0.1,0.9, false);
-  std::cout << "\n\n**************************\n";
-  exampleProducerConsumer(0,5.0, false);
+  /*std::cout << "\n\n**************************\n";
+  exampleProducerConsumer(0,5.0, false);*/
   std::cout << "\n\n**************************\n";
   exampleProducerConsumer(0.05,5.0, false);
   std::cout << "\n\n**************************\n";
 
-  std::cout << "\n\n**************************\n";
+  /*std::cout << "\n\n**************************\n";
   exampleProducerConsumer(0,0, true);
   std::cout << "\n\n**************************\n";
   exampleProducerConsumer(0.1,0, true);
   std::cout << "\n\n**************************\n";
-  exampleProducerConsumer(0,0.1, true);
+  exampleProducerConsumer(0,0.1, true);*/
   std::cout << "\n\n**************************\n";
   exampleProducerConsumer(0.1,0.9, true);
   std::cout << "\n\n**************************\n";
