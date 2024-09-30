@@ -3,7 +3,7 @@ cmake_minimum_required(VERSION 3.13)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-project(jthread VERSION 22.07.0
+project(jthread VERSION 23.00.0
         HOMEPAGE_URL https://github.com/StirlingLabs/jthread
         LANGUAGES CXX)
 
@@ -36,7 +36,7 @@ if (ENABLE_JTHREAD_TESTS)
     enable_testing()
 
     add_executable(test_stoken
-            include/stop_token
+            include/stop_token.hpp
             source/condition_variable_any2.hpp
             source/test_stoken.cpp
             source/test.hpp)
@@ -44,7 +44,7 @@ if (ENABLE_JTHREAD_TESTS)
     set_tests_properties(test_stoken PROPERTIES TIMEOUT 30)
 
     add_executable(test_stokencb
-            include/stop_token
+            include/stop_token.hpp
             source/condition_variable_any2.hpp
             source/test_stokencb.cpp
             source/test.hpp)
@@ -52,7 +52,7 @@ if (ENABLE_JTHREAD_TESTS)
     set_tests_properties(test_stokencb PROPERTIES TIMEOUT 30)
 
     add_executable(test_stokenrace
-            include/stop_token
+            include/stop_token.hpp
             source/condition_variable_any2.hpp
             source/test_stokenrace.cpp
             source/test.hpp)
@@ -60,25 +60,25 @@ if (ENABLE_JTHREAD_TESTS)
     set_tests_properties(test_stokenrace PROPERTIES TIMEOUT 30)
 
     add_executable(test_stopcb
-            include/stop_token
+            include/stop_token.hpp
             source/test_stopcb.cpp
             source/test.hpp)
     add_test(NAME test_stopcb COMMAND test_stopcb)
     set_tests_properties(test_stopcb PROPERTIES TIMEOUT 30)
 
     add_executable(test_jthread1
-            include/stop_token
+            include/stop_token.hpp
             source/condition_variable_any2.hpp
-            include/jthread
+            include/jthread.hpp
             source/test_jthread1.cpp
             source/test.hpp)
     add_test(NAME test_jthread1 COMMAND test_jthread1)
     set_tests_properties(test_jthread1 PROPERTIES TIMEOUT 30)
 
     add_executable(test_jthread2
-            include/stop_token
+            include/stop_token.hpp
             source/condition_variable_any2.hpp
-            include/jthread
+            include/jthread.hpp
             source/test_jthread2.cpp
             source/test.hpp)
     add_test(NAME test_jthread2 COMMAND test_jthread2)
@@ -87,8 +87,8 @@ if (ENABLE_JTHREAD_TESTS)
     # CV is just not ready for "prime time" (noop sched 1-core)
     if (NOT DEFINED ENV{CI})
         add_executable(test_cv
-                include/stop_token
-                include/jthread
+                include/stop_token.hpp
+                include/jthread.hpp
                 source/condition_variable_any2.hpp
                 source/test_cv.cpp
                 source/test.hpp)
@@ -96,8 +96,8 @@ if (ENABLE_JTHREAD_TESTS)
         set_tests_properties(test_cv PROPERTIES TIMEOUT 30)
 
         add_executable(test_cvcb
-                include/stop_token
-                include/jthread
+                include/stop_token.hpp
+                include/jthread.hpp
                 source/condition_variable_any2.hpp
                 source/test_cvcb.cpp
                 source/test.hpp)
@@ -105,8 +105,8 @@ if (ENABLE_JTHREAD_TESTS)
         set_tests_properties(test_cvcb PROPERTIES TIMEOUT 30)
 
         add_executable(test_cvrace
-                include/stop_token
-                include/jthread
+                include/stop_token.hpp
+                include/jthread.hpp
                 source/condition_variable_any2.hpp
                 source/test_cvrace.cpp
                 source/test.hpp)
@@ -114,8 +114,8 @@ if (ENABLE_JTHREAD_TESTS)
         set_tests_properties(test_cvrace PROPERTIES TIMEOUT 30)
 
         add_executable(test_cvrace_hh
-                include/stop_token
-                include/jthread
+                include/stop_token.hpp
+                include/jthread.hpp
                 source/condition_variable_any2.hpp
                 source/test_cvrace_hh.cpp
                 source/test.hpp)
@@ -123,8 +123,8 @@ if (ENABLE_JTHREAD_TESTS)
         set_tests_properties(test_cvrace_hh PROPERTIES TIMEOUT 30)
 
         add_executable(test_cvrace_stop
-                include/stop_token
-                include/jthread
+                include/stop_token.hpp
+                include/jthread.hpp
                 source/condition_variable_any2.hpp
                 source/test_cvrace_stop.cpp
                 source/test.hpp)
@@ -132,8 +132,8 @@ if (ENABLE_JTHREAD_TESTS)
         set_tests_properties(test_cvrace_stop PROPERTIES TIMEOUT 30)
 
         add_executable(test_cvprodcons
-                include/stop_token
-                include/jthread
+                include/stop_token.hpp
+                include/jthread.hpp
                 source/condition_variable_any2.hpp
                 source/test_cvprodcons.cpp
                 source/test.hpp)
