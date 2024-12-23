@@ -3,7 +3,7 @@ cmake_minimum_required(VERSION 3.13)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-project(jthread VERSION 24.00.0
+project(jthread VERSION 24.00.1
         HOMEPAGE_URL https://github.com/StirlingLabs/jthread
         LANGUAGES CXX)
 
@@ -22,16 +22,13 @@ target_compile_features(jthread INTERFACE cxx_std_17)
 
 include_directories(include)
 
-include(GNUInstallDirs)
-
 install(TARGETS jthread
         EXPORT jthread_Targets
-        ARCHIVE DESTINATION ${CMAKE_INSTALL_LIBDIR}
-        LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR}
-        RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR})
+        LIBRARY DESTINATION lib
+        ARCHIVE DESTINATION lib
+        RUNTIME DESTINATION bin)
 
-install(DIRECTORY ${PROJECT_SOURCE_DIR}/include
-        DESTINATION ${CMAKE_INSTALL_INCLUDEDIR})
+install(DIRECTORY "include/" TYPE INCLUDE)
 
 if (ENABLE_JTHREAD_TESTS)
     enable_testing()

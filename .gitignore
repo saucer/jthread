@@ -16,4 +16,5 @@ Makefile.h
 
 .DS_Store
 
+build/
 cmake-*/
